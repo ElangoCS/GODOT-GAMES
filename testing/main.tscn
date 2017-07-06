@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://mod.jpg" type="Texture" id=1]
+[ext_resource path="res://scripts/back.gd" type="Script" id=2]
+[ext_resource path="res://player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/spawner.gd" type="Script" id=4]
+
+[node name="main" type="Node2D"]
+
+transform/pos = Vector2( 0, 2.78949 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 314.341, 578.982 )
+transform/scale = Vector2( 0.751886, 0.678577 )
+texture = ExtResource( 1 )
+script/script = ExtResource( 2 )
+
+[node name="player" parent="." instance=ExtResource( 3 )]
+
+[node name="spwaner" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = true
+script/script = ExtResource( 4 )
+
+
